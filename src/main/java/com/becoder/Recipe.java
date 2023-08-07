@@ -10,6 +10,7 @@ public class Recipe {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
 //forTest
+    //SecondTest
     private String description;
     private  Integer prepTime;
     private Integer cookTime;
