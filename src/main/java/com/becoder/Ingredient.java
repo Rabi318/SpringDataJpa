@@ -1,6 +1,8 @@
 package com.becoder;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -13,7 +15,8 @@ public class Ingredient {
     private BigDecimal amount;
     @ManyToOne
     private Recipe recipe;
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
+
     private UnitOfMeasure unitOfMeasure;
 
     public Long getId() {
